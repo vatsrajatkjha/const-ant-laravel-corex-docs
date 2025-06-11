@@ -316,7 +316,7 @@
         <div class="vendor-highlight">
             <h3>📦 Important: Package Installation Location</h3>
             <p>When installing Laravel packages via Composer, they are automatically placed in the <code>/vendor</code> directory of your Laravel application. This is the standard location for all third-party packages and dependencies managed by Composer.</p>
-            <div class="command-box">composer require vendor-name/package-name</div>
+            <div class="command-box">composer require const-ant/laravel-corex</div>
             <p>The package will be installed to: <code>your-laravel-app/vendor/vendor-name/package-name/</code></p>
         </div>
 
@@ -324,16 +324,19 @@
             <h2>⚡ Quick Installation Guide</h2>
             <div class="step-list">
                 <li>Install the package via Composer:
-                    <div class="command-box">composer require your-vendor/laravel-modular-package</div>
+                    <div class="command-box">composer require const-ant/laravel-corex</div>
                 </li>
                 <li>Publish the configuration file:
-                    <div class="command-box">php artisan vendor:publish --provider="YourVendor\LaravelModularPackage\Providers\ModularServiceProvider"</div>
-                </li>
-                <li>Run the package installation command:
-                    <div class="command-box">php artisan modular:install</div>
+                    <div class="command-box">php artisan vendor:publish --tag=corex-module-migrations"</div>
                 </li>
                 <li>Create your first module:
                     <div class="command-box">php artisan make:module BlogModule</div>
+                </li>
+                <li>Add Marketplace our module:
+                    <div class="command-box">php artisan module:marketplace install Module_Name</div>
+                </li>
+                <li>Enable our module:
+                    <div class="command-box">php artisan module:enable Module_Name</div>
                 </li>
             </div>
         </div>
@@ -348,7 +351,7 @@
             
             <div class="milestone-grid">
                 <div class="milestone-card">
-                    <h4>📁 Modular /src Directory Structure</h4>
+                    <h4>📁 Module /src Directory Structure</h4>
                     <p>Established a clear directory hierarchy to organize the package's components efficiently.</p>
                 </div>
                 <div class="milestone-card">
@@ -390,30 +393,33 @@
             </div>
 
             <h3>📂 Suggested Final Directory Tree</h3>
-            <div class="directory-tree">
-/vendor/your-vendor/laravel-modular-package/src/
-├── Config/
-├── Console/
-│   └── Commands/
-├── Contracts/
-├── Database/
-│   └── Migrations/
-├── Events/
-├── Http/
-│   └── Middleware/
-├── Install/
-├── Models/
-├── Notifications/
-├── Providers/
-├── Repositories/
-├── Resources/
-│   ├── lang/
-│   └── views/
-├── Routes/
-├── Services/
-└── Traits/
-            </div>
-        </div>
+<div class="directory-tree">
+  <pre>
+/vendor/const-ant-laravelcorex/
+└── src/
+    ├── Config/
+    ├── Console/
+    │   └── Commands/
+    ├── Contracts/
+    ├── Database/
+    │   └── Migrations/
+    ├── Events/
+    ├── Http/
+    │   └── Middleware/
+    ├── Install/
+    ├── Models/
+    ├── Notifications/
+    ├── Providers/
+    ├── Repositories/
+    ├── Resources/
+    │   ├── lang/
+    │   └── views/
+    ├── Routes/
+    ├── Services/
+    └── Traits/
+  </pre>
+</div>
+
 
         <div class="phase phase-2">
             <h2><div class="phase-icon">🔧</div>Phase 2: Feature Integration & Custom Commands</h2>
@@ -448,7 +454,7 @@
                     <div class="feature-icon">🏗️</div>
                     <h4>make:module Command</h4>
                     <p>Scaffold new modules with predefined structure</p>
-                    <div class="command-box">php artisan make:module ModuleName</div>
+                    <div class="command-box">php artisan make:module BlogModule</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
@@ -460,7 +466,7 @@
                     <div class="feature-icon">📦</div>
                     <h4>publish:module Command</h4>
                     <p>Publish module resources individually</p>
-                    <div class="command-box">php artisan publish:module Blog --config</div>
+                    <div class="command-box">php artisan vendor:publish --tag=corex-module-migrations</div>
                 </div>
             </div>
         </div>
@@ -653,7 +659,7 @@
             <div class="milestone-card">
                 <h4>🏗️ Laravel Installer Package</h4>
                 <p>Create a package to scaffold new projects with the modular system:</p>
-                <div class="command-box">composer create-project vendor/modular-starter</div>
+                <div class="command-box">composer require const-ant/laravel-corex</div>
             </div>
 
             <h3>🗺️ Feature Roadmap</h3>
@@ -711,7 +717,7 @@
         <div style="text-align: center; padding: 40px; color: #666;">
             <h2>🚀 Ready to Get Started?</h2>
             <p>Transform your Laravel development with modular architecture!</p>
-            <div class="command-box">composer require your-vendor/laravel-modular-package</div>
+            <div class="command-box">composer require const-ant/laravel-corex</div>
         </div>
     </div>
 </body>
